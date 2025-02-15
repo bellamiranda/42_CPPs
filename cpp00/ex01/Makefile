@@ -7,7 +7,7 @@ GREY = \033[0;37m
 CYAN = \e[1;36m
 RESET = \e[0m
 
-SRCS = PhoneBook.cpp PhoneBook.hpp
+SRCS = Contact.cpp PhoneBook.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
