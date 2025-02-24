@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 14:54:28 by ismirand          #+#    #+#             */
-/*   Updated: 2025/02/15 15:51:32 by ismirand         ###   ########.fr       */
+/*   Updated: 2025/02/24 14:30:09 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 class PhoneBook {
 
 private:
-	Contact	Contacts[8];
-	int saved_contacts;
-	int	oldest_contact;
+	Contact	contacts[8];
+	int saved;
+	int	oldest;
 
 public:
 	PhoneBook();

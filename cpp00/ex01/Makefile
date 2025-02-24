@@ -11,7 +11,7 @@ SRCS = Contact.cpp PhoneBook.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = megaphone
+NAME = PhoneBook
 
 CC = c++ -Wall -Wextra -Werror -std=c++98
 

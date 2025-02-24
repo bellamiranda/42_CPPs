@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:15:07 by ismirand          #+#    #+#             */
-/*   Updated: 2025/02/15 16:02:04 by ismirand         ###   ########.fr       */
+/*   Updated: 2025/02/24 15:06:46 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 #define CONTACT_HPP
 
 #include <iostream>
+#include <string>
+#include <iomanip>//setw
 
 #include <string.h>
-#include <string>
-#include <iomanip>
 #include <cstdlib>
 #include <unistd.h>
 
