@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:15:07 by ismirand          #+#    #+#             */
-/*   Updated: 2025/02/24 15:06:46 by ismirand         ###   ########.fr       */
+/*   Updated: 2025/03/05 16:01:29 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,26 +23,27 @@
 
 class Contact {
 
-private:
-	std::string	FirstName;
-	std::string	LastName;
-	std::string	Nickname;
-	std::string	PhoneNumber;
-	std::string	DarkestSecret;
-
 public:
 	Contact();
 	~Contact();
-	void	set_FirstName();
-	void	set_LastName();
-	void	set_Nickname();
-	void	set_PhoneNumber();
-	void	set_DarkestSecret();
-	std::string	get_FirstName();
-	std::string	get_LastName();
-	std::string	get_Nickname();
-	std::string	get_PhoneNumber();
-	std::string	get_DarkestSecret();
+	void	setFirstName();
+	void	setLastName();
+	void	setNickname();
+	void	setPhoneNumber();
+	void	setDarkestSecret();
+	std::string	getFirstName();
+	std::string	getLastName();
+	std::string	getNickname();
+	std::string	getPhoneNumber();
+	std::string	getDarkestSecret();
+
+private:
+	std::string	_FirstName;
+	std::string	_LastName;
+	std::string	_Nickname;
+	std::string	_PhoneNumber;
+	std::string	_DarkestSecret;
+
 };
 
 #define RESET	"\033[0m"

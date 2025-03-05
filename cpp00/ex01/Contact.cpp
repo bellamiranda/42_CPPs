@@ -6,24 +6,24 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 14:48:41 by ismirand          #+#    #+#             */
-/*   Updated: 2025/02/24 16:24:05 by ismirand         ###   ########.fr       */
+/*   Updated: 2025/03/05 16:01:29 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
 Contact::Contact(){
-	this->FirstName = "";
-	this->LastName = "";
-	this->Nickname = "";
-	this->PhoneNumber = "";
-	this->DarkestSecret = "";
+	this->_FirstName = "";
+	this->_LastName = "";
+	this->_Nickname = "";
+	this->_PhoneNumber = "";
+	this->_DarkestSecret = "";
 }
 
 Contact::~Contact(){
 }
 
-void Contact::set_FirstName(){
+void Contact::setFirstName(){
 	
 	std::string Input = "";
 	while (42){
@@ -34,14 +34,14 @@ void Contact::set_FirstName(){
 			std::exit(0); 
 		}
 		if (!Input.empty() && !has_digit(Input)){
-			this->FirstName = Input;
+			this->_FirstName = Input;
 			break;
 		}
 		std::cout << RED << "🚨 Please insert a valid First Name" << RESET << std::endl;
 	}
 }
 
-void Contact::set_LastName(){
+void Contact::setLastName(){
 	
 	std::string Input = "";
 	while (42){
@@ -52,14 +52,14 @@ void Contact::set_LastName(){
 			std::exit(0); 
 		}
 		if (!Input.empty() && !has_digit(Input)){
-			this->LastName = Input;
+			this->_LastName = Input;
 			break;
 		}
 		std::cout << RED << "🚨 Please insert a valid Last Name" << RESET << std::endl;
 	}
 }
 
-void Contact::set_Nickname(){
+void Contact::setNickname(){
 	
 	std::string Input = "";
 	while (42){
@@ -70,14 +70,14 @@ void Contact::set_Nickname(){
 			std::exit(0);
 		}
 		if (!Input.empty()){
-			this->Nickname = Input;
+			this->_Nickname = Input;
 			break;
 		}
 		std::cout << RED << "🚨 Please insert a valid Nickname" << RESET << std::endl;
 	}
 }
 
-void Contact::set_PhoneNumber(){
+void Contact::setPhoneNumber(){
 	
 	std::string Input = "";
 	while (42){
@@ -88,14 +88,14 @@ void Contact::set_PhoneNumber(){
 			std::exit(0);
 		}
 		if (!Input.empty() && !has_letter(Input)){
-			this->PhoneNumber = Input;
+			this->_PhoneNumber = Input;
 			break;
 		}
 		std::cout << RED << "🚨 Please insert a valid PhoneNumber" << RESET << std::endl;
 	}
 }
 
-void Contact::set_DarkestSecret(){
+void Contact::setDarkestSecret(){
 	
 	std::string Input = "";
 	while (42){
@@ -106,29 +106,29 @@ void Contact::set_DarkestSecret(){
 			std::exit(0);
 		}
 		if (!Input.empty()){
-			this->DarkestSecret = Input;
+			this->_DarkestSecret = Input;
 			break;
 		}
 		std::cout << RED << "🚨 Please insert the Darkest Secret" << RESET << std::endl;
 	}
 }
 
-std::string Contact::get_FirstName(){
-	return (this->FirstName);
+std::string Contact::getFirstName(){
+	return (this->_FirstName);
 }
 
-std::string Contact::get_LastName(){
-	return (this->LastName);
+std::string Contact::getLastName(){
+	return (this->_LastName);
 }
 
-std::string Contact::get_Nickname(){
-	return (this->Nickname);
+std::string Contact::getNickname(){
+	return (this->_Nickname);
 }
 
-std::string Contact::get_PhoneNumber(){
-	return (this->PhoneNumber);
+std::string Contact::getPhoneNumber(){
+	return (this->_PhoneNumber);
 }
 
-std::string Contact::get_DarkestSecret(){
-	return (this->DarkestSecret);
+std::string Contact::getDarkestSecret(){
+	return (this->_DarkestSecret);
 }
