@@ -11,7 +11,7 @@ SRCS = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = Zombies
+NAME = BraiiiiiiinnnzzzZ
 
 CC = c++ -Wall -Wextra -Werror -std=c++98
 
@@ -20,7 +20,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	
 	@$(CC) $(OBJS) -o $(NAME) > /dev/null 2>&1
-	@echo "$(GREEN)[✔] Zombies ready $(RESET)"
+	@echo "$(GREEN)[✔] BraiiiiiiinnnzzzZ ready $(RESET)"
 
 $(OBJS): %.o: %.cpp	
 	@$(CC) -c $< -o $@ > /dev/null 2>&1
