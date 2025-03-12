@@ -19,21 +19,21 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	
-	@$(CC) $(OBJS) -o $(NAME)
+	@$(CC) $(OBJS) -o $(NAME) > /dev/null 2>&1
 	@echo "$(GREEN)[✔] Moar brainz! ready $(RESET)"
 	@echo "$(MGT)RULES: Insert the ammount of Zombies and than the name of the horde"
 	@echo "Insert as many hordes as you want"
 	@echo "🚨 ATTENTION: the first information has to be a number (int) $(RESET)"
 
 $(OBJS): %.o: %.cpp	
-	@$(CC) -c $< -o $@ 
+	@$(CC) -c $< -o $@ > /dev/null 2>&1
 
 clean:
-	@rm -f $(OBJS) 
+	@rm -f $(OBJS) > /dev/null 2>&1
 	@echo "$(ORANGE)[✔] Cleaning $(RESET) "
 
 fclean: clean
-	@rm -f $(NAME)
+	@rm -f $(NAME) > /dev/null 2>&1
 	@echo "$(RED)[✔] Full cleaning $(RESET) "
 
 re: fclean all

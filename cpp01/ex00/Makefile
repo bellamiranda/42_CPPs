@@ -1,6 +1,6 @@
 GREEN = \e[0;32m
 BLUE = \e[1;034m
-MAGENTA = \033[1;35m
+MGT = \033[1;35m
 ORANGE = \033[1;38;5;208m
 GREY = \033[0;37m
 RED = \e[0;31m
@@ -21,6 +21,7 @@ $(NAME): $(OBJS)
 	
 	@$(CC) $(OBJS) -o $(NAME) > /dev/null 2>&1
 	@echo "$(GREEN)[✔] BraiiiiiiinnnzzzZ ready $(RESET)"
+	@echo "$(MGT)🚨 RULES: Insert the zombie's name(s) as a parameter $(RESET)"
 
 $(OBJS): %.o: %.cpp	
 	@$(CC) -c $< -o $@ > /dev/null 2>&1

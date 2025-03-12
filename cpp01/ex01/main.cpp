@@ -9,7 +9,7 @@ int	main(int argc, char **argv)
 	for (int i = 1; argv[i]; i += 2){
 		int N = std::atoi(argv[i]);
 		if (!N){
-			std::cout << RED << "FIRST INFORMATION HAS TO BE A NUMBER 💥" << std::endl;
+			std::cout << RED << "FIRST INFORMATION HAS TO BE A NUMBER 💥" << RESET << std::endl;
 			return (1);
 		}
 		Zombie *horde = zombieHorde(N, argv[i + 1]);
