@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:15:07 by ismirand          #+#    #+#             */
-/*   Updated: 2025/03/11 16:01:59 by ismirand         ###   ########.fr       */
+/*   Updated: 2025/03/12 16:20:40 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 #include <iomanip>//setw
 
 #include <string.h>
-#include <cstdlib>
 #include <unistd.h>
 
 class Contact {
