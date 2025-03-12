@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 15:38:51 by ismirand          #+#    #+#             */
-/*   Updated: 2025/02/24 16:25:04 by ismirand         ###   ########.fr       */
+/*   Updated: 2025/03/12 14:11:58 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ bool handle_input(std::string input, PhoneBook *phonebook){
 	else if (input == "EXIT" || input == "exit" || input == "3")
 		return (false);
 	else
-		std::cout << RED << "Invalid command!" << RESET << std::endl;
+		std::wcout << RED << "Invalid command!" << RESET << std::endl;
 	return (true);
 }
 
@@ -29,10 +29,10 @@ int	main(void){
 	std::string	input;
 	while (!std::cin.eof()){
 		input = "";
-		std::cout << MGT << "Enter one of These Commands:\n1. ADD\n2. SEARCH\n3. EXIT" << RESET << std::endl;
+		std::wcout << MGT << "Enter one of These Commands:\n1. ADD\n2. SEARCH\n3. EXIT" << RESET << std::endl;
 		std::getline(std::cin, input);
 		if (std::cin.eof()){
-			std::cout << std::endl << CTRLD << std::endl;
+			std::wcout << std::endl << CTRLD << std::endl;
 			std::exit(0);
 		}
 		if (!handle_input(input, &phonebook))

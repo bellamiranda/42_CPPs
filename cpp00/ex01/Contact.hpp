@@ -6,7 +6,7 @@
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 15:15:07 by ismirand          #+#    #+#             */
-/*   Updated: 2025/03/05 16:01:29 by ismirand         ###   ########.fr       */
+/*   Updated: 2025/03/11 16:01:59 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ private:
 
 #define RESET	"\033[0m"
 #define RED		"\033[31;1m"
+#define CYAN	"\033[36;1m"
 #define GREEN	"\033[32;1m"
 #define MGT		"\033[35;1m"
-#define CYAN	"\033[36;1m"
 #define CTRLD 	RED << "CTRL+D Exit PhoneBook !" << RESET
 
 #endif
