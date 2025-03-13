@@ -12,3 +12,10 @@ int main(void){
 	std::cout << "Value of stringPTR: " << *stringPTR << std::endl;
 	std::cout << "Value of stringREF: " << stringREF << std::endl;
 }
+
+//reference is like an alias, pointer is a separate object
+//is like another name to the variable it refers to
+//any change to ref affect the variable because they are the same memory location
+//can't be changed after initialization
+//a pointer can point to another variable after
+//ref cannot be null, a pointer can
