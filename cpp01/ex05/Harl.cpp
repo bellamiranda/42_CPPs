@@ -11,11 +11,11 @@ void Harl::debug(){
 }
 
 void Harl::info(){
-	std::cout << CYAN << "Info function called" << RESET << std::endl;
+	std::cout << YELLOW << "Info function called" << RESET << std::endl;
 }
 
 void Harl::warning(){
-	std::cout << MGT << "Warning function called" << RESET << std::endl;
+	std::cout << ORANGE << "Warning function called" << RESET << std::endl;
 }
 
 void Harl::error(){

@@ -1,10 +1,11 @@
-GREEN = \e[0;32m
-BLUE = \e[1;034m
-MGT = \033[1;35m
+GREEN = \033[1;32m
+YELLOW = \033[1;38;5;220m
 ORANGE = \033[1;38;5;208m
-GREY = \033[0;37m
-RED = \e[0;31m
+RED = \033[31;1m
+MGT = \033[1;35m
 CYAN = \e[1;36m
+BLUE = \e[1;034m
+GREY = \033[0;37m
 RESET = \e[0m
 
 SRCS = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp

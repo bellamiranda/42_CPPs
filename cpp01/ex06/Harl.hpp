@@ -17,7 +17,6 @@ private:
 	void info( void );
 	void warning( void );
 	void error( void );
-
 };
 
 #define RESET	"\033[0m"

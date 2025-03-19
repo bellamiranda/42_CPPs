@@ -21,6 +21,6 @@ private:
 #define RED		"\033[31;1m"
 #define CYAN	"\033[36;1m"
 #define MGT		"\033[1;35m"
-#define GREEN	"\e[0;32m"
+#define GREEN	"\033[1;32m"
 
 #endif
