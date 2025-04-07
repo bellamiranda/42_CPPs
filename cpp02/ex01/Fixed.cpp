@@ -17,11 +17,6 @@ Fixed::Fixed(const float num){
 	this->value = roundf(num * (1 << bits));
 }
 
-
-//FALTA ESTUDAR CONVERSAO FIXED-FLOATIND POINT
-
-
-
 Fixed::Fixed(const Fixed& copy){
 	std::cout << "Copy constructor called" << std::endl;
 	*this = copy;
@@ -36,6 +31,15 @@ Fixed& Fixed::operator=(const Fixed& other){
 
 Fixed::~Fixed(){
 	std::cout << "Destructor called" << std::endl;
+}
+
+int Fixed::getRawBits(void)const{
+	std::cout << "getRawBits member function called" << std::endl;
+	return (this->value);
+}
+
+void Fixed::setRawBits(int const raw){
+	this->value = raw;
 }
 
 //convert fixed-point to float
