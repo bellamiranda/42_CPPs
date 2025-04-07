@@ -18,8 +18,12 @@ int main( void ) {
 	Fixed test2(4);
 	Fixed test3(0);
 	Fixed test4(8);
+	Fixed test5(5.4f);
+	Fixed test6(1.4f);
 	std::cout << test1 + test2 << std::endl;
 	std::cout << test1 - test2 << std::endl;
+	std::cout << "FLOAT " << test5 - test2 << std::endl;
+	std::cout << "FLOAT " << test5 - test6 << std::endl;
 	std::cout << test1 * test2 << std::endl;
 	std::cout << test2 / test1 << std::endl;
 	std::cout << test2 / test3 << std::endl << std::endl;

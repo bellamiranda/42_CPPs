@@ -20,9 +20,8 @@ public:
 	void setRawBits( int const raw );
 	float toFloat() const;
 	int toInt() const;
-	friend std::ostream& operator<<(std::ostream& buf, const Fixed& fixed);
 };
-//friend functions allow non-member functions to access private members
-//<< can access value without a getter
+
+std::ostream& operator<<(std::ostream& buf, const Fixed& fixed);
 
 #endif

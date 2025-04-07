@@ -100,7 +100,7 @@ Fixed Fixed::operator*(const Fixed &other){
 Fixed Fixed::operator/(const Fixed &other){
 	if (other.getRawBits() == 0){
 		std::cout << "Error: divinding by zero" << std::endl;
-		return Fixed(this->toFloat());//return the same number
+		return Fixed();
 	}
 	return Fixed(this->toFloat() / other.toFloat());
 }

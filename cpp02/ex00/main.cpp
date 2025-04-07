@@ -13,6 +13,9 @@ int main( void ) {
 
 
 /* 
+ADHOC POLYMORPHISM - having functions with the same name but receiving 
+different parameters
+Specialize the process of a function based on its parameters
 DEFAULT CONSTRUCTOR - initializes objects (not builtin types)
 	Example(int val){
 		ptr = new int (val);}
