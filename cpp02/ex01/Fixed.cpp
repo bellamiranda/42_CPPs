@@ -6,15 +6,15 @@ Fixed::Fixed(){
 }
 
 //converts int to fixed-point
-Fixed::Fixed(const int num){
+Fixed::Fixed(const int i){
 	std::cout << "Int constructor called" << std::endl;
-	this->value = num << bits;
+	this->value = i << bits;
 }
 
 //converts floating-point to fixed-point
-Fixed::Fixed(const float num){
+Fixed::Fixed(const float f){
 	std::cout << "Float constructor called" << std::endl;
-	this->value = roundf(num * (1 << bits));
+	this->value = roundf(f * (1 << bits));
 }
 
 Fixed::Fixed(const Fixed& copy){

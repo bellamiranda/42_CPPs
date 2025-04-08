@@ -11,8 +11,8 @@ private:
 	static const int bits = 8;
 public:
 	Fixed();
-	Fixed(const int num);
-	Fixed(const float num);
+	Fixed(const int i);
+	Fixed(const float f);
 	Fixed(const Fixed& copy);
 	Fixed& operator=(const Fixed& other);
 	~Fixed();
