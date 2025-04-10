@@ -64,11 +64,11 @@ void ClapTrap::attack(const std::string& target){
 		std::cout << CYAN << "Insert a valid target" << RESET << std::endl;
 		return;
 	}
-	if (!this->_hitPoints){
+	if (this->_hitPoints <= 0){
 		std::cout << MGT << "ClapTrap " << this->_name << " has no Hit Points and cannot attack" << RESET << std::endl;
 		return;
 	}
-	if (!this->_energyPoints){
+	if (this->_energyPoints <= 0){
 		std::cout << MGT << "ClapTrap " << this->_name << " has no Energy Points and cannot attack" << RESET << std::endl;
 		return;
 	}
@@ -85,7 +85,7 @@ void ClapTrap::takeDamage(unsigned int amount){
 		std::cout << CYAN << "Insert a positive amount for damage" << RESET << std::endl;
 		return;
 	}
-	if (!this->_hitPoints){
+	if (this->_hitPoints <= 0){
 		std::cout << MGT << "ClapTrap " << this->_name << " is dead and cannot be attacked" << RESET << std::endl;
 		return;
 	}
@@ -103,11 +103,11 @@ void ClapTrap::beRepaired(unsigned int amount){
 		std::cout << CYAN << "Insert a positive amount for repairing" << RESET << std::endl;
 		return;
 	}
-	if (!this->_hitPoints){
+	if (this->_hitPoints <= 0){
 		std::cout << MGT << "ClapTrap " << this->_name << " has no Hit Points and cannot be repaired" << RESET << std::endl;
 		return;
 	}
-	if (!this->_energyPoints){
+	if (this->_energyPoints <= 0){
 		std::cout << MGT << "ClapTrap " << this->_name << " has no Energy Points and cannot be repaired" << RESET << std::endl;
 		return;
 	}
