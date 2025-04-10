@@ -31,6 +31,7 @@ int main(void){
 	}
 	maria.displayHealth();
 	pedro.displayHealth();
+	return 0;
 }
 
 /* 
