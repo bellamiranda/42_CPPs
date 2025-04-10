@@ -14,7 +14,7 @@ OBJS = $(SRCS:.cpp=.o)
 
 NAME = DiamondTrap
 
-CC = c++ -Wall -Wextra -Werror -std=c++98 -g
+CC = c++ -Wall -Wextra -Werror -std=c++98 -g -Wshadow
 
 all: $(NAME)
 
