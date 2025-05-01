@@ -14,7 +14,7 @@ public:
 	virtual ~WrongAnimal();
 	
 	std::string getType()const;
-	void makeSound()const;
+	void makeSound()const;//is not virtual so it won't be replaced
 };
 
 class WrongCat : public WrongAnimal {
