@@ -6,15 +6,15 @@ Brain::Brain(){
 
 Brain::Brain(const Brain& copy){
 	std::cout << YELLOW << "Brain Copy constructor" << RESET << std::endl;
-	for (int i = 0; i < 100; ++i)
-        _ideas[i] = copy._ideas[i];
+	this->copyIdeas(copy);
 }
 
 Brain& Brain::operator=(const Brain& copy){
 	if (this != &copy){
 		std::cout << YELLOW << "Brain Copy assignment operator" << RESET << std::endl;
-		for (int i = 0; i < 100; ++i)
-        	_ideas[i] = copy._ideas[i];
+		this->copyIdeas(copy);
+		//copy each element of the array individually (content)
+		//string manages its own heap memory -> deep copy
 	}
 	return *this;
 }
@@ -30,7 +30,7 @@ void Brain::setIdea(const std::string newIdea){
 	}
 
 	int i = 0;
-	while(i < 100 && !this->_ideas[i].empty()){
+	while (i < 100 && !this->_ideas[i].empty()){
 		i++;
 	}
 	if (i < 100){
@@ -41,9 +41,22 @@ void Brain::setIdea(const std::string newIdea){
 		std::cout << RED "Brain is FULL!! No space for new ideas.\n" RESET << std::endl;
 }
 
-std::string Brain::getIdea(int index) const{
-//FACO RETORNANDO A ARRAY TODA OU SO O INDEX?????
-	if (index >= 0 && index < 100)
-		return this->_ideas[index];
-	return "";
+std::string *Brain::getIdeas(){
+	return this->_ideas;
+}
+
+void Brain::displayIdeas(){
+	if (this->_ideas[0].empty()){
+		std::cout << RED "Brain is empty!! No idea to display" RESET << std::endl;
+		return;
+	}
+	int i = -1;
+	while (!this->_ideas[++i].empty())
+		std::cout << TURQ << this->_ideas[i] << RESET << std::endl;
+	return;
+}
+
+void Brain::copyIdeas(const Brain &src){
+	for (int i = 0; i < 100; i++)
+		this->_ideas[i] = src._ideas[i];
 }

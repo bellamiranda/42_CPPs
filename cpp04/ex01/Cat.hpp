@@ -15,6 +15,9 @@ public:
 	~Cat();
 
 	void makeSound()const;
+	void setBrainIdea(std::string newIdea);
+	std::string *getBrainIdeas();
+	void displayBrainIdeas();
 };
 
 #endif
