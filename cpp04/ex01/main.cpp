@@ -13,6 +13,12 @@ int main()
 		delete array[i];
 
 	std::cout << std::endl << RED " ----- TEST BRAIN ----- " RESET << std::endl;
+	Cat *test = new Cat();
+	for (int i = 0; i < 102; i++)
+    	test->setBrainIdea("Idea");
+	delete test;
+	std::cout << std::endl;
+
 	Cat *cat = new Cat();
 	Dog *dog = new Dog();
 	cat->displayBrainIdeas();
@@ -30,27 +36,36 @@ int main()
 	dog->displayBrainIdeas();
 
 	std::cout << std::endl << RED " ----- TEST DEEP COPIES ----- " RESET << std::endl;
-	Cat *test1 = new Cat();
-	*test1 = *cat;
-	test1->setBrainIdea("miaauuu");
-	std::cout << RED " ----- TEST1 IDEAS ----- " RESET << std::endl;
-	test1->displayBrainIdeas();
+	Cat *cat1 = new Cat();
+	*cat1 = *cat;
+	cat1->setBrainIdea("miaauuu");
+	std::cout << RED " ----- CAT1 IDEAS ----- " RESET << std::endl;
+	cat1->displayBrainIdeas();
 	std::cout << std::endl;
 	
-	Cat *test2 = new Cat(*cat);
-	test2->setBrainIdea("TESTE");
-	std::cout << RED " ----- TEST2 IDEAS ----- " RESET << std::endl;
-	test2->displayBrainIdeas();
+	Cat *cat2 = new Cat(*cat);
+	cat2->setBrainIdea("copy constructor test");
+	std::cout << RED " ----- CAT2 IDEAS ----- " RESET << std::endl;
+	cat2->displayBrainIdeas();
 	std::cout << std::endl;
 
-	std::cout << RED " ----- OLD CAT IDEAS ----- " RESET << std::endl;
+	std::cout << RED " ----- ORIGINAL CAT IDEAS ----- " RESET << std::endl;
 	cat->displayBrainIdeas();
+	std::cout << std::endl;
+
+	Dog* dog2 = new Dog(*dog);
+	dog2->setBrainIdea("Woooff");
+	std::cout << RED " ----- DOG1 IDEAS ----- " RESET << std::endl;
+	dog2->displayBrainIdeas();
+	std::cout << std::endl << RED " ----- ORIGINAL DOG IDEAS ----- " RESET << std::endl;
+	dog->displayBrainIdeas();
+	std::cout << std::endl;
 
 	Animal *arrayOfAnimals[2] = {cat, dog};
 	arrayOfAnimals[0]->makeSound();
 	arrayOfAnimals[1]->makeSound();
 
-	delete cat; delete dog; delete test1; delete test2;
+	delete cat; delete dog; delete cat1; delete cat2; delete dog2;
 	return 0;
 }
 

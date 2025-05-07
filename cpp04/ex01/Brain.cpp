@@ -35,10 +35,10 @@ void Brain::setIdea(const std::string newIdea){
 	}
 	if (i < 100){
 		this->_ideas[i] = newIdea;
-		std::cout << GREEN "New idea '" << newIdea << "' added to the brain in the position " << i << std::endl;
+		std::cout << GREEN "New idea '" << newIdea << "' added to the brain in the position " << i + 1 << std::endl;
 	}
 	else
-		std::cout << RED "Brain is FULL!! No space for new ideas.\n" RESET << std::endl;
+		std::cout << RED "Brain is FULL!! No space for new ideas." RESET << std::endl;
 }
 
 std::string *Brain::getIdeas(){
