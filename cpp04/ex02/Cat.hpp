@@ -14,6 +14,7 @@ public:
 	Cat& operator=(const Cat& copy);
 	~Cat();
 
+	//std::string getType()const;
 	void makeSound()const;
 	void setBrainIdea(std::string newIdea);
 	std::string *getBrainIdeas();

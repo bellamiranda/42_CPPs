@@ -28,6 +28,10 @@ Dog::~Dog(){
 	delete this->_brain;
 }
 
+/* std::string Dog::getType()const{
+	return this->_type;
+} */
+
 void Dog::makeSound()const{
 	std::cout << ORANGE BLINK << "Auu auuu... 🐶" << RESET << std::endl;
 }

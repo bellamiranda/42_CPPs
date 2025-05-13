@@ -14,6 +14,7 @@ public:
 	Dog& operator=(const Dog& copy);
 	~Dog();
 
+	//std::string getType()const;
 	void makeSound()const;
 	void setBrainIdea(std::string newIdea);
 	std::string *getBrainIdeas();

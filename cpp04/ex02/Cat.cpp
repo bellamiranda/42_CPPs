@@ -29,6 +29,10 @@ Cat::~Cat(){
 	delete this->_brain;
 }
 
+/* std::string Cat::getType()const{
+	return this->_type;
+} */
+
 void Cat::makeSound()const{
 	std::cout << MGT BLINK << "Miaaauuu... 😸" << RESET << std::endl;
 }

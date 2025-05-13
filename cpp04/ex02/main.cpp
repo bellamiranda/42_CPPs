@@ -1,11 +1,19 @@
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "Wrong.hpp"
 
 int main()
 {
-
+	//AAnimal *aanimal = new AAnimal;
+	//AAnimal animal = AAnimal;
+	Cat *cat = new Cat;
+	Dog *dog = new Dog;
+	std::cout << RED "cat type: " << cat->getType() << RESET << std::endl;
+	cat->makeSound();
+	std::cout << RED "dog type: " << dog->getType() << RESET << std::endl;
+	dog->makeSound();
+	delete cat; delete dog;
 }
 
 /* 
