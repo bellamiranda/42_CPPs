@@ -18,5 +18,5 @@ AMateria* Ice::clone() const {
 }
 
 void Ice::use(ICharacter &target) {
-	std::cout << GREEN "* shoots an ice bolt at " << target.getName() << RESET << std::endl;
+	std::cout << CYAN BLINK "* shoots an ice bolt at " << target.getName() << " *" RESET << std::endl;
 }

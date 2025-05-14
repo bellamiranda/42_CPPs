@@ -16,9 +16,10 @@ public:
 	AMateria(const AMateria &);
 	AMateria& operator=(const AMateria &);
 	virtual ~AMateria();
+	
+	virtual AMateria* clone() const = 0;
 
 	std::string const & getType() const; //Returns the materia type
-	virtual AMateria* clone() const = 0;
 	virtual void use(ICharacter& target);
 	bool isEquiped;
 	bool atFloor;

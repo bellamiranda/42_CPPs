@@ -23,5 +23,5 @@ std::string const & AMateria::getType() const {
 
 void AMateria::use(ICharacter &target) {
 	(void) target;
-	std::cout << "AMateria called" << std::endl;
+	std::cout << YELLOW "AMateria use method called" RESET << std::endl;
 }

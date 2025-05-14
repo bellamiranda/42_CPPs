@@ -1,26 +1,26 @@
 #include "MateriaSource.hpp"
 
 MateriaSource::MateriaSource() {
-	std::cout << "MateriaSource Default constructor" << std::endl;
+	//std::cout << "MateriaSource Default constructor" << std::endl;
 	for (int i = 0; i < 4; i++)
 		this->_source[i] = NULL;
 }
 
 MateriaSource::MateriaSource(const MateriaSource& src){
-	std::cout << "MateriaSource Copy constructor" << std::endl;
+	//std::cout << "MateriaSource Copy constructor" << std::endl;
 	this->copySource(src);
 }
 
 MateriaSource& MateriaSource::operator=(const MateriaSource& src){
 	if (this != &src){
-		std::cout << "MateriaSource assignment operator" << std::endl;
+		//std::cout << "MateriaSource assignment operator" << std::endl;
 		this->copySource(src);
 	}
 	return *this;
 }
 
 MateriaSource::~MateriaSource(){
-	std::cout << "MateriaSource Destructor" << std::endl;
+	//std::cout << "MateriaSource Destructor" << std::endl;
 	int i = 0;
 	while (this->_source[i])
 		delete (this->_source[i++]);
@@ -38,6 +38,7 @@ void MateriaSource::learnMateria(AMateria* m){
 	}
 }
 
+//create copies of learned materias to be equiped by character
 //verify backwards to priorize the last one learned
 AMateria* MateriaSource::createMateria(std::string const & type){
 	int i = 0;
@@ -57,13 +58,11 @@ AMateria* MateriaSource::createMateria(std::string const & type){
 
 void MateriaSource::copySource(const MateriaSource& src){
 	for (int i = 0; i < 4; i++){
-		if (this->_source[i])
-			delete (this->_source[i]);
+/* 		if (this->_source[i])
+			delete (this->_source[i]); */
+		//this->_source[i] = src._source[i] ? src._source[i]->clone() : NULL;
 		this->_source[i] = NULL;
-	}
-	int i = 0;
-	while (src._source[i]){
-		this->_source[i] = src._source[i];
-		i++;
+		if (src._source[i])
+			this->_source[i] = src._source[i]->clone();
 	}
 }

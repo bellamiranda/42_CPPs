@@ -8,7 +8,7 @@ BLUE = \e[1;034m
 GREY = \033[0;37m
 RESET = \e[0m
 
-SRCS = main.cpp AMateria.cpp Cure.cpp Ice.cpp Character.cpp MateriaSound.cpp Floor.cpp
+SRCS = main.cpp AMateria.cpp Cure.cpp Ice.cpp Character.cpp MateriaSource.cpp Floor.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

@@ -15,7 +15,9 @@ public:
 
 	void learnMateria(AMateria*);
 	AMateria* createMateria(std::string const & type);
+	
 	void copySource(const MateriaSource&);
 };
+//stores the learned materias and can make copies of them or create it
 
 #endif

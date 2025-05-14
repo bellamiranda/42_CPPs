@@ -19,5 +19,5 @@ AMateria* Cure::clone() const {
 }
 
 void Cure::use(ICharacter &target) {
-	std::cout << GREEN "* heals " << target.getName() << "'s wounds *" RESET << std::endl;
+	std::cout << MGT BLINK "* heals " << target.getName() << "'s wounds *" RESET << std::endl;
 }
