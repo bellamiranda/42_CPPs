@@ -12,7 +12,7 @@ SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp Wrong.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = Polymorphism
+NAME = ex00
 
 CC = c++ -Wall -Wextra -Werror -std=c++98 -g -Wshadow
 

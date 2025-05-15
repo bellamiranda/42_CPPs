@@ -61,9 +61,12 @@ int main()
 	dog->displayBrainIdeas();
 	std::cout << std::endl;
 
-	Animal *arrayOfAnimals[2] = {cat, dog};
+	Animal *arrayOfAnimals[5] = {cat, dog, cat1, cat2, dog2};
 	arrayOfAnimals[0]->makeSound();
 	arrayOfAnimals[1]->makeSound();
+	arrayOfAnimals[2]->makeSound();
+	arrayOfAnimals[3]->makeSound();
+	arrayOfAnimals[4]->makeSound();
 
 	delete cat; delete dog; delete cat1; delete cat2; delete dog2;
 	return 0;

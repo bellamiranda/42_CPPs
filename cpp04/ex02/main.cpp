@@ -7,13 +7,17 @@ int main()
 {
 	//AAnimal *aanimal = new AAnimal;
 	//AAnimal animal = AAnimal;
-	Cat *cat = new Cat;
-	Dog *dog = new Dog;
-	std::cout << RED "cat type: " << cat->getType() << RESET << std::endl;
-	cat->makeSound();
-	std::cout << RED "dog type: " << dog->getType() << RESET << std::endl;
-	dog->makeSound();
-	delete cat; delete dog;
+
+	int size = 4;
+	AAnimal* animals[size];
+    for (int i = 0; i < size / 2; i++)
+        animals[i] = new Dog();
+    for (int i = size / 2; i < size; i++)
+        animals[i] = new Cat();
+    for (int i = 0; i < size; i++)
+        animals[i]->makeSound();
+    for (int i = 0; i < size; i++)
+        delete animals[i];
 }
 
 /* 

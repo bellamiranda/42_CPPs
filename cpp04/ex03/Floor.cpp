@@ -1,6 +1,6 @@
 #include "Floor.hpp"
 
-//initialize static instance
+//initialize static instance (singleton)
 Floor* Floor::_instance = NULL;
 
 Floor::Floor(){

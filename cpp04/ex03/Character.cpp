@@ -89,6 +89,7 @@ void Character::use(int idx, ICharacter& target){
 		this->_inventory[idx]->use(target);//calls function use of AMateria (Ice or Cure) for the target
 }
 
+//deep inventory copy
 void Character::copyInventory(const Character &src) {
 	for (int i = 0; i < 4; i++){
 /* 		if (this->_inventory[i])
