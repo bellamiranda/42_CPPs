@@ -1,11 +1,27 @@
 #include "Bureaucrat.hpp"
 
+Bureaucrat::Bureaucrat() : _name("Default"), _grade(150) {
+	std::cout << GREEN << "Bureaucrat " << this->_name << " created with grade " << this->_grade << RESET << std::endl;
+}
+
 Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade) {
 	if (this->_grade < 1)
 		throw Bureaucrat::GradeTooHighException();
 	else if (this->_grade > 150)
 		throw Bureaucrat::GradeTooLowException();
 	std::cout << GREEN << "Bureaucrat " << this->_name << " created with grade " << this->_grade << RESET << std::endl;
+}
+
+Bureaucrat::Bureaucrat(const Bureaucrat& src) : _name(src._name), _grade(src._grade) {
+	std::cout << GREEN << "Bureaucrat " << this->_name << "copy created with grade " << this->_grade << RESET << std::endl;
+}
+
+Bureaucrat& Bureaucrat::operator=(const Bureaucrat& src) {
+	if (this != &src) {
+		//this->_name = src._name;
+		this->_grade = src._grade;
+	}
+	return *this;
 }
 
 Bureaucrat::~Bureaucrat() {

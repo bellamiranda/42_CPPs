@@ -11,7 +11,10 @@ protected:
 	std::string const _name;
 	int _grade;
 public:
+	Bureaucrat();
 	Bureaucrat(std::string name, int grade);
+	Bureaucrat(const Bureaucrat&);
+	Bureaucrat& operator=(const Bureaucrat&);
 	~Bureaucrat();
 
 	std::string getName() const;
