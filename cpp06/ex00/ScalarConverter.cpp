@@ -12,10 +12,13 @@ void ScalarConverter::ifChar(char c) {
 
 void ScalarConverter::ifInt(const int i) {
 	std::cout << ORANGE "char: ";
-	if (i < 0 || i > 127 || !isprint(i)) {
-		std::cout << "impossible" << std::endl;
+	if (i >= 0 && i <= 127) {
+		if (isprint(i))
+			std::cout << static_cast<char>(i) << std::endl;
+		else
+			std::cout << "non displayable" << std::endl;
 	} else {
-		std::cout << static_cast<char>(i) << std::endl;
+		std::cout << "impossible" << std::endl;
 	}
 	std::cout << "int: " << i << std::endl;
 	std::cout << std::fixed << std::setprecision(1) <<
@@ -25,12 +28,15 @@ void ScalarConverter::ifInt(const int i) {
 
 void ScalarConverter::ifFloat(const float f) {
 	std::cout << CYAN "char: ";
-	if (f < 0 || f > 127 || !isprint(static_cast<int>(f))) {
-		std::cout << "impossible" << std::endl;
+	if (f >= 0 && f <= 127) {
+		if (isprint(f))
+			std::cout << static_cast<char>(f) << std::endl;
+		else
+			std::cout << "non displayable" << std::endl;
 	} else {
-		std::cout << static_cast<char>(f) << std::endl;
+		std::cout << "impossible" << std::endl;
 	}
-	if (f < INT_MIN || f > INT_MAX) {
+	if (f < INT_MIN || f > INT_MAX || std::isnan(f) || std::isinf(f)) {
 		std::cout << "int: impossible" << std::endl;
 	} else {
 		std::cout << "int: " << static_cast<int>(f) << std::endl;
@@ -44,12 +50,15 @@ void ScalarConverter::ifFloat(const float f) {
 //isinf - checks if the value is infinite
 void ScalarConverter::ifDouble(const double d) {
 	std::cout << YELLOW "char: ";
-	if (d < 0 || d > 127 || !isprint(static_cast<int>(d))) {
-		std::cout << "impossible" << std::endl;
+	if (d >= 0 && d <= 127) {
+		if (isprint(d))
+			std::cout << static_cast<char>(d) << std::endl;
+		else
+			std::cout << "non displayable" << std::endl;
 	} else {
-		std::cout << static_cast<char>(d) << std::endl;
+		std::cout << "impossible" << std::endl;
 	}
-	if (d < INT_MIN || d > INT_MAX) {
+	if (d < INT_MIN || d > INT_MAX || std::isnan(d) || std::isinf(d)) {
 		std::cout << "int: impossible" << std::endl;
 	} else {
 		std::cout << "int: " << static_cast<int>(d) << std::endl;
@@ -76,8 +85,8 @@ void ScalarConverter::convert(const std::string &literal) {
 	char *rest;
 	long i = std::strtol(literal.c_str(), &rest, 10);
 	//if it doesnt have . or - or any rest
-	if (literal.find('.') == std::string::npos && !rest[0] && *literal.c_str() != '-')
-		return ifInt(i);//std::atoi(literal.c_str()) or static_cast<int>(i));
+	if (literal.find('.') == std::string::npos && !rest[0] && i >= INT_MIN && i <= INT_MAX)
+		return ifInt(static_cast<int>(i));//std::atoi(literal.c_str()) or static_cast<int>(i));
 
 	//float
 	float f = std::strtof(literal.c_str(), &rest);
