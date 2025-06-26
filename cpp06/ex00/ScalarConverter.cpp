@@ -3,7 +3,7 @@
 //std::fixed - activate fixed-point notation (not scientific)
 //std::setprecision(1) - defines the number of decimals
 void ScalarConverter::ifChar(char c) {
-	std::cout << MGT "char: " << c << std::endl;
+	std::cout << MGT "char: '" << c << "'" << std::endl;
 	std::cout << "int: " << static_cast<int>(c) << std::endl;
 	std::cout << std::fixed << std::setprecision(1) <<
 	"float: " << static_cast<float>(c) << "f\n" <<
@@ -14,7 +14,7 @@ void ScalarConverter::ifInt(const int i) {
 	std::cout << ORANGE "char: ";
 	if (i >= 0 && i <= 127) {
 		if (isprint(i))
-			std::cout << static_cast<char>(i) << std::endl;
+			std::cout << "'" << static_cast<char>(i) << "'" << std::endl;
 		else
 			std::cout << "non displayable" << std::endl;
 	} else {
@@ -30,7 +30,7 @@ void ScalarConverter::ifFloat(const float f) {
 	std::cout << CYAN "char: ";
 	if (f >= 0 && f <= 127) {
 		if (isprint(f))
-			std::cout << static_cast<char>(f) << std::endl;
+			std::cout << "'" << static_cast<char>(f) << "'" << std::endl;
 		else
 			std::cout << "non displayable" << std::endl;
 	} else {
@@ -52,7 +52,7 @@ void ScalarConverter::ifDouble(const double d) {
 	std::cout << YELLOW "char: ";
 	if (d >= 0 && d <= 127) {
 		if (isprint(d))
-			std::cout << static_cast<char>(d) << std::endl;
+			std::cout << "'" << static_cast<char>(d) << "'" << std::endl;
 		else
 			std::cout << "non displayable" << std::endl;
 	} else {
