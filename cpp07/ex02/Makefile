@@ -12,7 +12,7 @@ SRCS = main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = ex03
+NAME = ex02
 
 CC = c++ -Wall -Wextra -Werror -std=c++98 -g -Wshadow
 
