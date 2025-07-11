@@ -4,12 +4,14 @@
 
 #include <iostream>
 #include <string>
+#include <math.h>
+#include <limits>
 
 template <typename T>
 class Array {
 private:
 	T* _data;
-	unsigned int _size;
+	unsigned int _size;//std::size_t
 public:
 	Array() : _data(NULL), _size(0) {} //value-initialized to NULL and size to 0
 	Array(unsigned int n) : _data(new T[n]()), _size(n) {}
@@ -51,6 +53,9 @@ public:
 		return _size;
 	}
 };
+
+#define INT_MAX		std::numeric_limits<int>::max()
+#define INT_MIN		std::numeric_limits<int>::min()
 
 #define RESET	"\033[0m"
 #define GREEN	"\033[1;32m"
