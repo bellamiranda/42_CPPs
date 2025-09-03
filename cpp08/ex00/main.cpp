@@ -5,7 +5,7 @@ void testList(int nbr);
 void testDeque(int nbr);
 
 int main() {
-	std::cout << "Choose a container type to work with: \n1 - vector\n2 - List\n3 - Deque" << std::endl;
+	std::cout << "Choose a container type to work with: \n1 - Vector\n2 - List\n3 - Deque" << std::endl;
 	int i; std::cin >> i;
 
 	std::cout << "Digit a number to search inside the container: (1 to 10): ";
@@ -35,13 +35,15 @@ void testVector(int nbr) {
 	vec.push_back(2);
 	vec.push_back(3);
 
-	std::cout << "\nTesting std::vector:" << std::endl;
+	std::cout << "\nVector contents:" << std::endl;
+	for (std::vector<int>::iterator it = vec.begin(); it != vec.end(); it++)
+		std::cout << *it << std::endl; 
 
     try {
         easyfind(vec, nbr);
-		std::cout << GREEN "found: " << nbr << RESET << std::endl;
+		std::cout << GREEN "\nFound: " << nbr << RESET << std::endl;
     } catch (const std::exception& e) {
-        std::cerr << RED "Error: " << e.what() << RESET << std::endl;
+        std::cerr << RED "\nError: " << e.what() << RESET << std::endl;
     }
 }
 
@@ -52,13 +54,15 @@ void testList(int nbr) {
 	lst.push_back(5);
 	lst.push_back(6);
 
-	std::cout << "\nTesting std::list:" << std::endl;
+	std::cout << "\nList contents:" << std::endl;
+	for (std::list<int>::iterator it = lst.begin(); it != lst.end(); it++)
+		std::cout << *it << std::endl;
 
     try {
         easyfind(lst, nbr);
-		std::cout << GREEN "found: " << nbr << RESET << std::endl;
+		std::cout << GREEN "\nFound: " << nbr << RESET << std::endl;
     } catch (const std::exception& e) {
-        std::cerr << RED "Error: " << e.what() << RESET << std::endl;
+        std::cerr << RED "\nError: " << e.what() << RESET << std::endl;
     }
 }
 
@@ -70,12 +74,14 @@ void testDeque(int nbr) {
 	deq.push_back(9);
 	deq.push_back(10);
 
-    std::cout << "\nTesting std::deque:" << std::endl;
+    std::cout << "\nDeque contents:" << std::endl;
+	for (std::deque<int>::iterator it = deq.begin(); it != deq.end(); it++)
+		std::cout << *it << std::endl;
 
     try {
-        easyfind(deq, 0);
-		std::cout << GREEN "found: " << nbr << RESET << std::endl;
+        easyfind(deq, nbr);
+		std::cout << GREEN "\nFound: " << nbr << RESET << std::endl;
     } catch (const std::exception& e) {
-        std::cerr << RED "Error: " << e.what() << RESET << std::endl;
+        std::cerr << RED "\nError: " << e.what() << RESET << std::endl;
     }
 }
