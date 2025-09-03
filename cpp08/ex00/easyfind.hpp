@@ -24,7 +24,7 @@ CONTAINER: data structor to store and manage objects
 	sequence [i]: vector, list, deque, array (stores in linear order)
 		vector - dynamic array, fast access, dynamic resizing
 		deque - double ended queue, fast insertion and removal at both ends
-		list - double linked list, fast insert and delete anywhere, slow access
+		list - double linked list, fast insert and delete anywhere, slow access (list[i] doesn't exist)
 	associative [key]: set (stores unique values), map (stores pairs), multiset, multimap
 		keep elements sorted; key-based access (not by index - map[key]=25)
 iterator -> data type that points to an element in the container
