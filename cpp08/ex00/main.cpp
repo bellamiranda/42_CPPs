@@ -28,6 +28,12 @@ int main() {
 	return 0;
 }
 
+template <typename T>
+void printContainer(const T& container) {
+	for (typename T::const_iterator it = container.begin(); it != container.end(); it++)
+		std::cout << *it << std::endl;
+}
+
 void testVector(int nbr) {
     std::vector<int> vec;
 
@@ -36,8 +42,7 @@ void testVector(int nbr) {
 	vec.push_back(3);
 
 	std::cout << "\nVector contents:" << std::endl;
-	for (std::vector<int>::iterator it = vec.begin(); it != vec.end(); it++)
-		std::cout << *it << std::endl; 
+	printContainer(vec);
 
     try {
         easyfind(vec, nbr);
@@ -55,8 +60,7 @@ void testList(int nbr) {
 	lst.push_back(6);
 
 	std::cout << "\nList contents:" << std::endl;
-	for (std::list<int>::iterator it = lst.begin(); it != lst.end(); it++)
-		std::cout << *it << std::endl;
+	printContainer(lst);
 
     try {
         easyfind(lst, nbr);
@@ -75,8 +79,7 @@ void testDeque(int nbr) {
 	deq.push_back(10);
 
     std::cout << "\nDeque contents:" << std::endl;
-	for (std::deque<int>::iterator it = deq.begin(); it != deq.end(); it++)
-		std::cout << *it << std::endl;
+	printContainer(deq);
 
     try {
         easyfind(deq, nbr);
