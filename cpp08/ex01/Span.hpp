@@ -7,13 +7,17 @@
 #include <algorithm>
 #include <exception>
 #include <vector>
+#include <limits>
+#include <cmath>
+#include <ctime>
+#include <cstdlib>
 
 class Span {
 private:
 	unsigned int _N;
 	std::vector<int> _v;
 public:
-Span();
+	Span();
 	Span(unsigned int N);
 	Span(const Span &src);
 	~Span();
@@ -36,7 +40,7 @@ void Span::addMultipleNumbers(Iterator begin, Iterator end) {
 }
 
 /* 
-Vector: random access by index, easy iteration and sort, compact
+Vector: random access by index, easy iteration and sort (std::sort), compact
 */
 
 #define RESET	"\033[0m"
