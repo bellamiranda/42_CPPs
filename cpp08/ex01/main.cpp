@@ -29,16 +29,30 @@ int main() {
 		std::cerr << RED << "Erro: " << e.what() << RESET << std::endl;
 	}
 
+	std::cout << MGT << "\n----- ADD MULTIPLE NUMBERS TEST -----" << RESET << std::endl;
+	try {
+		Span sp3(15);
+		std::vector<int> numbers;
+		for (int i = 0; i < 15; i++)
+			numbers.push_back(i);
+		sp3.addMultipleNumbers(numbers.begin(), numbers.end());
+		std::cout << "Shortest span: " << sp3.shortestSpan() << std::endl;
+		std::cout << "Longest span: " << sp3.longestSpan() << std::endl;
+	}
+	catch (const std::exception &e) {
+		std::cerr << RED << "Error: " << e.what() << RESET << std::endl;
+	}
+
 	std::cout << MGT << "\n----- RANDOM 10000 NUMBERS TEST -----" << RESET << std::endl;
 	try {
-        Span sp3(10000);
+        Span sp4(10000);
 
         std::srand(std::time(NULL));
         for (int i = 0; i < 10000; ++i)
-            sp3.addNumber(std::rand());
+            sp4.addNumber(std::rand());
 
-        std::cout << "Shortest span: " << sp3.shortestSpan() << std::endl;
-        std::cout << "Longest span: " << sp3.longestSpan() << std::endl;
+        std::cout << "Shortest span: " << sp4.shortestSpan() << std::endl;
+        std::cout << "Longest span: " << sp4.longestSpan() << std::endl;
 
     } catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << std::endl;
