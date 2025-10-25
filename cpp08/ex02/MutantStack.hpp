@@ -5,6 +5,7 @@
 #include <stack>
 #include <iterator>
 #include <iostream>
+#include <list>
 
 template <typename T>
 class MutantStack : public std::stack<T> {
@@ -21,9 +22,9 @@ public:
     typedef typename std::stack<T>::container_type::iterator iterator;
     iterator begin() { return this->c.begin(); }
     iterator end() { return this->c.end(); }
-
-	//void push(T const & value) { this->c.push_back(value); }
 };
+
+//stack doesn't allow iteration but its internal container does
 
 #define RESET	"\033[0m"
 #define GREEN	"\033[1;32m"

@@ -24,8 +24,30 @@ int main()
 		++it;
 	}
 	std::stack<int> s(mstack);
+	std::cout << "Top of copied stack: " << s.top() << std::endl;
+	std::cout << "Size of copied stack: " << s.size() << std::endl;
 
-	std::cout << MGT << "----- ADDITIONAL TEST -----" << RESET << std::endl;
+	std::cout << MGT << "\n----- COMPARING WITH LIST -----" << RESET << std::endl;
+	std::list<int> lst;
+	lst.push_back(5);
+	lst.push_back(17);
+	std::cout << lst.back() << std::endl;
+	lst.pop_back();
+	std::cout << lst.size() << std::endl;
+	lst.push_back(3);
+	lst.push_back(5);
+	lst.push_back(737);
+	//[...]
+	lst.push_back(0);
+	std::list<int>::iterator lit = lst.begin();
+	std::list<int>::iterator lite = lst.end();
+	++lit;
+	--lit;
+	while (lit != lite)
+	{
+		std::cout << *lit << std::endl;
+		++lit;
+	}
 
 	return 0;
 }
