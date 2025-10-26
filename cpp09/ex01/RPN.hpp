@@ -1,7 +1,24 @@
 #ifndef RPN_HPP
 #define RPN_HPP
 
+#include <stack>
+#include <iostream>
+#include <cstdlib>
+#include <exception>
+#include <limits>
 
+class RPN {
+public:
+	RPN();
+	RPN(const RPN& other);
+	RPN& operator=(const RPN& other);
+	~RPN();
+
+	void process(const std::string& expression);
+	void calculate(char op);
+private:
+	static std::stack<double> _stack;
+};
 
 
 #define RESET	"\033[0m"

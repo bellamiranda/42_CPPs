@@ -12,7 +12,7 @@ SRCS = main.cpp RPN.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = ex01
+NAME = RPN
 
 CC = c++ -Wall -Wextra -Werror -std=c++98 -g -Wshadow
 
