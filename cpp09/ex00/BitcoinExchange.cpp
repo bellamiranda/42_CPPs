@@ -8,7 +8,7 @@ BitcoinExchange::BitcoinExchange(const BitcoinExchange& other) {
 
 BitcoinExchange& BitcoinExchange::operator=(const BitcoinExchange& other) {
 	if (this != &other)
-		this->rates = other.rates;
+		this->_rates = other._rates;
 	return *this;
 }
 
@@ -31,7 +31,7 @@ void BitcoinExchange::loadRates(const std::string& filename) {
 
         std::string date = line.substr(0, sep);
         double rate = std::atof(line.substr(sep + 1).c_str());
-        rates[date] = rate;
+        _rates[date] = rate;
     }
 }
 
@@ -66,10 +66,10 @@ void BitcoinExchange::parseInput(const std::string& input) {
 }
 
 double BitcoinExchange::getRate(const std::string& date) {
-	std::map<std::string, double>::const_iterator it = rates.lower_bound(date);
-	if (it != rates.end() && it->first == date)
+	std::map<std::string, double>::const_iterator it = _rates.lower_bound(date);
+	if (it != _rates.end() && it->first == date)
 		return it->second;
-	if (it == rates.begin())
+	if (it == _rates.begin())
 		return 0.0;
 	--it;
 	return it->second;

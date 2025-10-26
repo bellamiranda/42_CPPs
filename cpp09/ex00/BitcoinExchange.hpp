@@ -27,7 +27,7 @@ public:
 	bool isValidValue(double value, const std::string& valueStr);
 
 private:
-	std::map<std::string, double> rates;
+	std::map<std::string, double> _rates;
 };
 
 #define RESET	"\033[0m"
