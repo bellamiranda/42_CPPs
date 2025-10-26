@@ -4,6 +4,14 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <fstream>
+#include <sstream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <climits>
+#include <cstdlib>
+#include <cctype>
 
 class BitcoinExchange {
 public:
@@ -12,15 +20,14 @@ public:
 	BitcoinExchange& operator=(const BitcoinExchange& other);
     ~BitcoinExchange();
 
+	void loadRates(const std::string& filename);
     void parseInput(const std::string& input);
-    void calculateExchange(const std::string& date, double amount);
+	double getRate(const std::string& date);
+	bool isValidDate(const std::string& date);
+	bool isValidValue(double value, const std::string& valueStr);
 
 private:
-	std::map<std::string, double> exchangeRates;
-
-	void loadExchangeRates(const std::string& filename);
-	bool isValidDate(const std::string& date);
-	bool isValidAmount(double amount);
+	std::map<std::string, double> rates;
 };
 
 #define RESET	"\033[0m"
