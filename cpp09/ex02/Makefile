@@ -12,7 +12,7 @@ SRCS = main.cpp PmergeMe.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = ex02
+NAME = PmergeMe
 
 CC = c++ -Wall -Wextra -Werror -std=c++98 -g -Wshadow
 
@@ -21,7 +21,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	
 	@$(CC) $(OBJS) -o $(NAME)
-	@echo "$(GREEN)[✔] Easy find ready $(RESET)"
+	@echo "$(GREEN)[✔] PmergeMe ready $(RESET)"
 
 $(OBJS): %.o: %.cpp	
 	@$(CC) -c $< -o $@ 

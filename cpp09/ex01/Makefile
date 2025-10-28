@@ -21,7 +21,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	
 	@$(CC) $(OBJS) -o $(NAME)
-	@echo "$(GREEN)[✔] Easy find ready $(RESET)"
+	@echo "$(GREEN)[✔] Reverse Polish Notation ready $(RESET)"
 
 $(OBJS): %.o: %.cpp	
 	@$(CC) -c $< -o $@ 
