@@ -14,7 +14,7 @@ Canonical Form: Understand and apply the Orthodox Canonical Form (constructor, c
 📌 Exercise 00 - `Mommy, when I grow
 up, I want to be a bureaucrat!`
 
-Create a class Bureaucrat with a name and a grade (int). The grade must be between 1 (highest) and 150 (lowest). Implement boundary checks and throw exceptions (GradeTooHighException, GradeTooLowException) when invalid values are set. Overload the << operator to print a Bureaucrat.
+Create a class Bureaucrat with a name and a grade (int). The grade must be between 1 (highest) and 150 (lowest). Implement boundary checks and throw exceptions (GradeTooHighException, GradeTooLowException) when invalid values are set. Overload the `<<` operator to print a Bureaucrat.
 
 📌 Exercise 01 - Form up, maggots!
 Implement a Form class which has a name, a grade required to sign, and a grade required to execute. Only Bureaucrats of appropriate grade can sign it. Attempting to sign with a low-grade bureaucrat must throw a GradeTooLowException. Maintain integrity of const attributes and use exception-safe coding.
@@ -23,7 +23,7 @@ Implement a Form class which has a name, a grade required to sign, and a grade r
 Make Bureaucrat and Form interact. A Bureaucrat should attempt to sign a Form, and you should handle this process using exceptions and informative output. Add methods to both classes to complete this flow, maintaining encapsulation and robust error handling.
 
 📌 Exercise 03 - At least this beats coffee-making
-Implement an Intern class with a makeForm() method that creates specific Form objects based on a string name and target, printing a creation message. Avoid using messy if/else chains—use clean, scalable logic to handle form selection and error reporting.
+Implement an Intern class with a `makeForm()` method that creates specific Form objects based on a string name and target, printing a creation message. Avoid using messy if/else chains—use clean, scalable logic to handle form selection and error reporting.
 
 # Conclusion
 Module 05 teaches essential practices for writing idiomatic and safe C++ code using operator overloading and exception handling. Mastering these concepts will help the understanding of how high-level features in C++ integrate with object-oriented design.
