@@ -1,17 +1,19 @@
 # 42 Cursus - C++ Module 09
 # Description
-C++ Module 09 at School 42 focuses on sequence containers, template specialization, and performance-oriented programming using standard containers like list and deque. The module emphasizes parsing, sorting, and evaluating performance between different container types.
+C++ Module 09 at School 42 focuses on sequence containers, template specialization, and performance-oriented programming using standard containers like `list` and `deque`. The module emphasizes parsing, sorting, and evaluating performance between different container types.
 
 # Topics Covered
-Container Comparison: Understanding the differences between std::list and std::deque.
+Container Comparison: Understanding the differences between `std::list` and `std::deque`.
 Parsing Inputs: Safely parse and validate command-line arguments.
 Template Programming: Create container-agnostic functions and classes.
 Performance Measurement: Use timing utilities to evaluate algorithm efficiency.
 Sorting Algorithms: Implement efficient sorting techniques on different containers.
 STL Integration: Practice STL usage in realistic applications.
 
+# Exercises 
+
 📌 Exercise 00- Bitcoin Exchange
-Create a program btc that reads a file of dates and values, multiplies each value by the closest (lower or equal) bitcoin price from a CSV database, and prints the result. Used a std::map to store and efficiently retrieve bitcoin prices by date, handling invalid inputs, formatting errors, and edge cases with appropriate messages.
+Create a program btc that reads a file of dates and values, multiplies each value by the closest (lower or equal) bitcoin price from a CSV database, and prints the result. Used a `std::map` to store and efficiently retrieve bitcoin prices by date, handling invalid inputs, formatting errors, and edge cases with appropriate messages.
 
 📌 Exercise 01 - Reverse Polish Notation
 Create a program RPN that takes a Reverse Polish Notation expression as input, processes it using a std::stack to evaluate the result, and prints the final value. Operands (0–9) and operators (+, -, *, /) are pushed and processed using stack logic; errors like invalid input or malformed expressions are reported via standard error.
