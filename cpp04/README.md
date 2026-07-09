@@ -11,6 +11,8 @@ Base Class References and Pointers: Using pointers and references to achieve pol
 Virtual Destructors: Ensuring proper cleanup in inheritance hierarchies.
 Decoupling and Interface-Oriented Design: Writing flexible and maintainable code.
 
+# Exercises 
+
 📌 Exercise 00 - Polymorphism
 Implement a base Animal class and derive Dog and Cat from it, each overriding makeSound() to print specific sounds. Use polymorphism to test behavior, and also create WrongAnimal/WrongCat to show what happens when virtual functions are missing. Obs -> My implementation have a mistake, and i've decided to not make the correction! Try to find it where is it.
 
