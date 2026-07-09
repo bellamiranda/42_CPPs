@@ -23,11 +23,5 @@ Make the Animal class abstract by declaring at least one pure virtual function (
 📌 Exercise 03 - Interface & recap
 Implement an AMateria abstract class as an interface, then define concrete classes Ice and Cure, each overriding clone() and use() to provide type-specific behavior. Create the Character class, which manages an inventory of up to 4 Materias using the ICharacter interface, with deep copying and memory-safe equip/unequip logic. Lastly, implement a MateriaSource class using the IMateriaSource interface to learn and clone Materias by type.
 
-# Useful References
-C++ Reference - Inheritance
-C++ Reference - Virtual Functions
-Effective C++ by Scott Meyers
-C++ Primer by Stanley B. Lippman
-
 # Conclusion
 Module 04 builds a strong foundation in multiple inheritance and polymorphism, reinforcing core C++ principles like encapsulation, abstraction, and interface-driven design. By completing this module, you'll better understand how to structure and manage complex class hierarchies in a safe and efficient way.
