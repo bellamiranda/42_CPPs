@@ -19,11 +19,5 @@ Implement a class Span that stores a collection of integers and can compute the 
 📌 Exercise 02 - Mutated abomination
 Create a class MutantStack that inherits from std::stack and adds iterator support. This enables iteration through stack elements like a container. Implement custom begin/end methods using std::stack::container_type.
 
-# Useful References
-C++ Reference - STL Containers
-C++ Reference - Algorithms
-C++ Reference - Iterators
-Effective STL by Scott Meyers
-
 # Conclusion
 Module 08 equiped me with practical skills to write efficient, generic code using the STL. Mastery of containers, iterators, and algorithms is essential for modern C++ development, and this module provides a solid foundation to build upon.
