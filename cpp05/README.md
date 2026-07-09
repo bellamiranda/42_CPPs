@@ -23,11 +23,5 @@ Make Bureaucrat and Form interact. A Bureaucrat should attempt to sign a Form, a
 📌 Exercise 03 - At least this beats coffee-making
 Implement an Intern class with a makeForm() method that creates specific Form objects based on a string name and target, printing a creation message. Avoid using messy if/else chains—use clean, scalable logic to handle form selection and error reporting.
 
-# Useful References
-C++ Reference - Operator Overloading
-C++ Reference - Exceptions
-Effective C++ by Scott Meyers
-C++ Primer by Stanley B. Lippman
-
 # Conclusion
 Module 05 teaches essential practices for writing idiomatic and safe C++ code using operator overloading and exception handling. Mastering these concepts will help the understanding of how high-level features in C++ integrate with object-oriented design.
