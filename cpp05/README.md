@@ -9,6 +9,8 @@ Custom Exceptions: Create and use your own exception classes.
 Encapsulation & Modularity: Keep class implementations clean, intuitive, and safe.
 Canonical Form: Understand and apply the Orthodox Canonical Form (constructor, copy constructor, destructor, and assignment operator).
 
+# Exercises
+
 📌 Exercise 00 - `Mommy, when I grow
 up, I want to be a bureaucrat!`
 
