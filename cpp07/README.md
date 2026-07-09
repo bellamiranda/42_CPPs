@@ -25,11 +25,5 @@ Copy constructor and assignment operator
 operator[] for element access
 Method to return array size Make sure to handle memory management correctly and avoid leaks.
 
-# Useful References
-C++ Reference - Templates
-C++ Reference - Function Templates
-Effective C++ by Scott Meyers
-C++ Templates: The Complete Guide by David Vandevoorde
-
 # Conclusion
 Module 07 strengthens your C++ skills through the use of generic programming and templates. By learning how to write flexible and reusable code, I am better prepared to tackle real-world software challenges with elegance and efficiency.
