@@ -4,10 +4,12 @@ C++ Module 06 at School 42 introduces type conversion, dynamic casting, and the 
 
 # Topics Covered
 Static and Dynamic Casts: Learn when and how to use static_cast, dynamic_cast, reinterpret_cast, and const_cast.
-RTTI (Run-Time Type Information): Use typeid and dynamic_cast to identify object types at runtime.
+RTTI (Run-Time Type Information): Use `typeid` and dynamic_cast to identify object types at runtime.
 Safe Downcasting: Use base class pointers to call derived class methods safely.
 Polymorphism: Rely on virtual functions to ensure correct object behavior.
 Abstract Base Classes: Utilize interfaces and pure virtual methods to enable polymorphic behavior.
+
+# Exercises
 
 📌 Exercise 00 - Conversion of scalar types
 Create a non-instantiable ScalarConverter class with a static convert() method that takes a string literal and prints its representation as char, int, float, and double. Handle special cases like non-displayable chars and pseudo-literals (nan, inf, etc.) appropriately.
