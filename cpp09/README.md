@@ -26,11 +26,5 @@ Sort both containers using a custom merge-insert algorithm.
 Measure and print the time taken by each container to perform the sort.
 Compare the results and performance between the two.
 
-# Useful References
-C++ Reference - list
-C++ Reference - deque
-C++ Reference - chrono
-Merge-Insertion Sort
-
 # Conclusion
 Module 09 brings together your C++ skills to solve a performance-sensitive problem with STL containers and algorithms. Understanding how different containers behave under the same operations is crucial for writing optimized and scalable applications.
