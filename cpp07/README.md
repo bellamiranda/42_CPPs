@@ -10,6 +10,8 @@ Template Specialization: Provide specific behavior for certain types.
 Generic Programming: Write code that works with any type.
 Compile-time Polymorphism: Use templates to achieve polymorphism without virtual functions.
 
+# Exercises
+
 📌 Exercise 00 - Start with a few functions
 Implement a template function swap that swaps two variables, min that returns the smaller of two values, and max that returns the larger. These functions should work with any comparable type. Test your implementation with multiple data types.
 
@@ -22,7 +24,7 @@ Implement a class template Array<T> that mimics a basic fixed-size array with bo
 Default constructor
 Constructor with size
 Copy constructor and assignment operator
-operator[] for element access
+`operator[]` for element access
 Method to return array size Make sure to handle memory management correctly and avoid leaks.
 
 # Conclusion
