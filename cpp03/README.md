@@ -38,11 +38,5 @@ Create a FragTrap class that inherits from ClapTrap, similar to ScavTrap, but wi
 # Exercise 03 - Now it’s weird!
 Create a DiamondTrap class that inherits from both FragTrap and ScavTrap, choosing attributes and methods from both parent classes. The class should have a private name attribute and a special whoAmI() function that displays both its name and the ClapTrap's name. Ensure proper handling of multiple inheritance and add tests for this complex behavior.
 
-# Useful References
-C++ Reference - Classes
-C++ Reference - Memory Management
-Effective C++ by Scott Meyers
-C++ Primer by Stanley B. Lippman
-
 # Conclusion
 Module 03 introduces advanced object-oriented programming concepts and extends your knowledge of C++ with practical examples like ClapTrap, ScavTrap, and FragTrap. By completing this module, I gained deeper insight into inheritance, polymorphism, and dynamic memory management.
